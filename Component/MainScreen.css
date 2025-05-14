@@ -1,0 +1,308 @@
+/* MainScreen.css */
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center;     /* Center the buttons vertically */
+  height: 100vh;           /* Full viewport height */
+  gap: 20px;               /* Space between buttons */
+}
+
+/* Button Styling */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  width: 300px; /* Set fixed width */
+  height: 120px; /* Set fixed height */
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+.easy-paisa-button {
+  background-color: #28a745; /* Green background for Chatbot */
+  color: white;
+}
+
+.payment-button {
+  background-color: #dc3545; /* Red background for Payment */
+  color: white;
+}
+
+.button-icon {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 25px; /* Adjust icon size */
+}
+
+/* Hover and Active Effects */
+.button:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Hover shadow */
+}
+
+.button:active {
+  transform: scale(0.98); /* Slight shrink effect on click */
+  box-shadow: none; /* No shadow on active */
+}
+
+/* Chat Window */
+.chat-window {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff; /* White background for the chat window */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around the window */
+  padding: 15px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between messages */
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+  word-wrap: break-word; /* Ensure long messages break properly */
+}
+
+.message.user {
+  background-color: #e1ffc7;
+  align-self: flex-end;
+  border: 1px solid #28a745; /* Green border for user messages */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for user message */
+}
+
+.message.bot {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+  border: 1px solid #ccc; /* Gray border for bot messages */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for bot message */
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  gap: 10px; /* Space between input and button */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat-input input:focus {
+  border-color: #28a745; /* Green border on focus */
+  outline: none;
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  background-color: #28a745; /* Green button for send */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.chat-input button:active {
+  background-color: #1e7e34; /* Even darker green on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-window {
+    width: 90%; /* Make chat window more flexible on smaller screens */
+    height: 400px;
+  }
+  .buttons-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .button {
+    width: 250px;
+    height: 100px;
+  }
+}
+
+
+/* Extra Buttons Container */
+.extra-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the new buttons horizontally */
+  margin-top: 20px; /* Add some spacing above */
+}
+
+/* New Button Styling */
+.file-claim-button,
+.create-policy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  width: 300px; /* Set fixed width */
+  height: 120px; /* Set fixed height */
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+.file-claim-button {
+  background-color: #ffc107; /* Yellow background for File Claim */
+  color: white;
+}
+
+.create-policy-button {
+  background-color: #007bff; /* Blue background for Create Policy */
+  color: white;
+}
+
+/* Hover and Active Effects */
+.file-claim-button:hover,
+.create-policy-button:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Hover shadow */
+}
+
+.file-claim-button:active,
+.create-policy-button:active {
+  transform: scale(0.98); /* Slight shrink effect on click */
+  box-shadow: none; /* No shadow on active */
+}
+
+.button-icon {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 25px; /* Adjust icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-window {
+    width: 90%; /* Make chat window more flexible on smaller screens */
+    height: 400px;
+  }
+  .extra-buttons {
+    flex-direction: column;
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
+  .button {
+    width: 250px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+/* Extra Buttons Container */
+.extra-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the new buttons horizontally */
+  margin-top: 20px; /* Add some spacing above */
+}
+
+/* New Button Styling */
+.file-claim-button,
+.create-policy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  width: 300px; /* Set fixed width */
+  height: 120px; /* Set fixed height */
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+.file-claim-button {
+  background-color: #ffc107; /* Yellow background for File Claim */
+  color: white;
+}
+
+.create-policy-button {
+  background-color: #007bff; /* Blue background for Create Policy */
+  color: white;
+}
+
+/* Hover and Active Effects */
+.file-claim-button:hover,
+.create-policy-button:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Hover shadow */
+}
+
+.file-claim-button:active,
+.create-policy-button:active {
+  transform: scale(0.98); /* Slight shrink effect on click */
+  box-shadow: none; /* No shadow on active */
+}
+
+.button-icon {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 25px; /* Adjust icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-window {
+    width: 90%; /* Make chat window more flexible on smaller screens */
+    height: 400px;
+  }
+  .extra-buttons {
+    flex-direction: column;
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
+  .button {
+    width: 250px;
+    height: 100px;
+  }
+}
